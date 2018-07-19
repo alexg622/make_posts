@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 router.get('/:userId', (req, res) => {
   User.findById(req.params.userId).then(user => res.json(user)).catch({msg: "Could not find user"})
 })
-router.get("/")
+
 router.post('/', (req, res) => {
   const newUser = new User({
     name: req.body.name,
